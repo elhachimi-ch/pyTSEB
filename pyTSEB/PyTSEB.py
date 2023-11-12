@@ -410,7 +410,7 @@ class PyTSEB(object):
         # Run the chosen model
 
         out_data = self.run(in_data.to_records(index=False))
-        out_data = pd.DataFrame(data=np.stack(out_data.values()).T,
+        out_data = pd.DataFrame(data=out_data,
                                 index=in_data.index,
                                 columns=out_data.keys())
 
